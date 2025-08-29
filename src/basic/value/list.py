@@ -34,11 +34,34 @@ def demo():
     # Deeper nested lists
     L = ['a', 'b', ['cc', 'dd', ['eee', 'fff']], 'g', 'h']
     print(L)
-
-
     print(L[2])  # Output: ['cc', 'dd', ['eee', 'fff']]
     print(L[2][2])  # Output: ['eee', 'fff']
     print(L[2][2][0])  # Output: eee
+
+    # List slicing
+    L = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+    print(L[:3])
+    print(L[6:])
+    print(L[2:7])
+    print(L[-7:-2])
+
+    # Slicing with a Step
+    print(L[2:7:2])
+    print(L[6:1:-2])
+
+    # Reversing a List
+    print(L[::-1])
+
+    # Modify multiple list items
+    L = ['a', 'b', 'c', 'd', 'e']
+    L[1:4] = [1, 2, 3]
+    print(L)
+
+    # Replace multiple elements in place of a single element
+    L = ['a', 'b', 'c', 'd', 'e']
+    L[1:2] = [1, 2, 3]
+    print(L)
+    # Output: ['a', 1, 2, 3, 'c', 'd', 'e']
 
     pass
 
