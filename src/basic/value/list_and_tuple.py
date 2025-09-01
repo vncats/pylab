@@ -1,4 +1,4 @@
-def demo():
+def demo_list():
     # A list of integers
     L = [1, 2, 3]
     print(L)
@@ -32,14 +32,14 @@ def demo():
     print(L)
 
     # Deeper nested lists
-    L = ['a', 'b', ['cc', 'dd', ['eee', 'fff']], 'g', 'h']
+    L = ["a", "b", ["cc", "dd", ["eee", "fff"]], "g", "h"]
     print(L)
     print(L[2])  # Output: ['cc', 'dd', ['eee', 'fff']]
     print(L[2][2])  # Output: ['eee', 'fff']
     print(L[2][2][0])  # Output: eee
 
     # List slicing
-    L = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+    L = ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
     print(L[:3])
     print(L[6:])
     print(L[2:7])
@@ -53,18 +53,34 @@ def demo():
     print(L[::-1])
 
     # Modify multiple list items
-    L = ['a', 'b', 'c', 'd', 'e']
+    L = ["a", "b", "c", "d", "e"]
     L[1:4] = [1, 2, 3]
     print(L)
 
     # Replace multiple elements in place of a single element
-    L = ['a', 'b', 'c', 'd', 'e']
+    L = ["a", "b", "c", "d", "e"]
     L[1:2] = [1, 2, 3]
     print(L)
-    # Output: ['a', 1, 2, 3, 'c', 'd', 'e']
 
-    pass
+
+def demo_tuple():
+    # A tuple of integers
+    T = (1, 2, 3)
+    print(T)
+
+    # A tuple of strings
+    T = ("red", "green", "blue")
+    print(T)
+
+    # A tuple with mixed datatypes
+    T = (1, "abc", 1.23, True)
+    print(T)
+
+    # Nested tuple
+    T = ("red", ("green", "blue"), "yellow")
+    print(T)
 
 
 if __name__ == "__main__":
-    demo()
+    demo_list()
+    demo_tuple()
