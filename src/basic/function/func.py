@@ -29,6 +29,17 @@ def hello():
 
     title_variadic_keyword(a="hello", b={"x": 1, "y": 2}, c=[1, 2, 3])
 
+    # Use / argument to indicate required positional arguments
+    def title_with_slash(name, age, /, job):
+        print(name, "is a", job, "and", age, "years old")
+
+    title_with_slash("John", 25, job="Developer")
+
+    # Use * argument to indicate keyword-only parameters
+    def title_with_star(name, *, job):
+        print(name, "is a", job)
+
+    title_with_star("John", job="Developer")
 
 if __name__ == "__main__":
     hello()
